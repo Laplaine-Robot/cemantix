@@ -18,8 +18,9 @@ async function handler(_req: Request): Promise<Response> {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
+    console.log(u.searchParams.get('param1'))
     const raw = JSON.stringify({
-        "word1":u.searchParams.get('param1')[0], //value1,
+        "word1":u.searchParams.get('param1'), //value1,
         "word2": "supelec"
     });
 
