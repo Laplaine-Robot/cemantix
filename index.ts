@@ -50,16 +50,13 @@ async function handler(_req: Request): Promise<Response> {
 
         console.log(result);
         return new Response(JSON.stringify(result), {
-            headers: { "Content-Type": "application/json" },
-            status: 200
-        }, {
+           
             status: 200,
             headers: {
                 "Content-Type": "application/json",
                 "Access-Control-Allow-Origin": "*",
                 "Access-Control-Allow-Headers": "content-type"
             }
-
         });
         
     } catch (error) {
