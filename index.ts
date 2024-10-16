@@ -49,7 +49,7 @@ async function handler(_req: Request): Promise<Response> {
         const result = await response.json();
 
         console.log(result);
-        return new Response(JSON.stringify({result : result*100}), {
+        return new Response(JSON.stringify({result : result.result*100}), {
            
             status: 200,
             headers: {
