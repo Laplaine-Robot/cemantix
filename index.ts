@@ -5,8 +5,7 @@ async function handler(_req: Request): Promise<Response> {
     if (_req.method ==
         "OPTIONS") {
 
-        return
-        new Response("Preflight OK!", {
+        return new Response("Preflight OK!", {
             status: 200,
             headers: {
                 "Access-Control-Allow-Origin": "*",
